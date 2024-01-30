@@ -1,5 +1,7 @@
 import math
 
+# computational complexity O(arr1.length + arr2.length)
+# memory complexity O(arr1.length + arr2.length)
 def merge_sorted_arrays(arr1, arr2):
 
     result = []
@@ -30,6 +32,8 @@ def merge_sorted_arrays(arr1, arr2):
 
     return result
 
+# computational complexity O(n * logn)
+# memory complexity O(n * logn)
 
 def merge_sort(arr: list):
     if len(arr) == 1:
