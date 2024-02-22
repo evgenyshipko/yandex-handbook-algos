@@ -46,7 +46,11 @@ commands = input()
 
 
 visited = set()
-visited.add(str(x) + str(y))
+
+def set_visited(x,y):
+    visited.add(str(x) + '|' + str(y))
+
+set_visited(x,y)
 
 for i in range(len(commands)):
     command = commands[i]
@@ -69,7 +73,8 @@ for i in range(len(commands)):
         else:
             x = new_x
             y = new_y
-            visited.add(str(x) + str(y))
+            set_visited(x,y)
+
     # print('command',command,'current_dir',current_dir,'visited',visited, 'x',x,'y',y)
 
 print(len(visited))
